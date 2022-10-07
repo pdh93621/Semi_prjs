@@ -1,6 +1,6 @@
 const {exec} = require('node:child_process')
-const a = 'my'
-const b = 'prj'
+const a = 'star'
+const b = '25'
 
 module.exports = function(app, fs)
 {     
