@@ -22,4 +22,13 @@ module.exports = function(app, fs)
       // console.log(req)
       res.send(req.body)
    })
+
+   app.get('/graph', (req, res) => {
+      let py_path = __dirname + "\\pyup.py"
+      let coin = "KRW-BTC"
+      exec(`python ${py_path} ${coin} 1 1 1 1`, (error, stdout, stderr) => {
+         console.log(stdout)
+         res.render('graph', JSON.parse(stdout))
+      })
+   })
 }

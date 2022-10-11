@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<body>
+<canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+<script type="text/javascript">
+    new Chart("myChart", {
+        type: "line",
+        data: {
+            labels: <%- JSON.stringify(labels); %>,
+            datasets: [{
+                lineTension: 0,
+                data: <%- JSON.stringify(open); %>,
+                borderColor: "red",
+                fill: false,
+            }, {
+                lineTension: 0,
+                data: <%- JSON.stringify(high); %>,
+                borderColor: "green",
+                fill: false,            
+            }, {
+                lineTension: 0,
+                data: <%- JSON.stringify(low); %>,
+                borderColor: "blue",
+                fill: false,
+            }, {
+                lineTension: 0,
+                data: <%- JSON.stringify(close); %>,
+                borderColor: "yellow",
+                fill: false,
+            }]
+        },
+        options: {
+            legend: {display: false}
+        }
+    });
+</script>
