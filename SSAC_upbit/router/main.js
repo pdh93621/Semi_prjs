@@ -27,7 +27,7 @@ module.exports = function(app, fs)
       let py_path = __dirname + "\\pyup.py"
       let coin = "KRW-BTC"
       exec(`python ${py_path} ${coin} 1 1 1 1`, (error, stdout, stderr) => {
-         console.log(stdout)
+         // console.log(stdout)
          res.render('graph', JSON.parse(stdout))
       })
    })
