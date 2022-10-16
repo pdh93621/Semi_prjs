@@ -1,0 +1,25 @@
+<form action="#" method="post">
+    <select id="select_coin">
+        <option value="KRW">KRW</option>
+        <option value="BTC">BTC</option>
+        <option value="USDT">USDT</option>
+    </select>
+
+    <select id="KRW">
+        <% for (const coin of KRW){ %>
+            <option value="<%= coin %>"><%= coin %></option>
+        <% } %>
+    </select>
+
+    <select id="BTC">
+        <% for (const coin of BTC){ %>
+            <option value="<%= coin %>"><%= coin %></option>
+        <% } %>
+    </select>
+
+    <select id="USDT">
+        <% for (const coin of USDT){ %>
+            <option value="<%= coin %>"><%= coin %></option>
+        <% } %>
+    </select>
+</form>

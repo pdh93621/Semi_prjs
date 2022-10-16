@@ -15,7 +15,7 @@ app.engine('html', require('ejs').renderFile)
 
 app.use(bodyParser.urlencoded({extended: true}))
 
-var router = require('./router/main')(app);
+var router = require('./router/main')(app, fs);
 
 // app.get('/', (req, res) => {
 //     let py_path = __dirname + "/public/prac_py.py"

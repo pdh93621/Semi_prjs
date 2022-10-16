@@ -31,4 +31,10 @@ module.exports = function(app, fs)
          res.render('graph', JSON.parse(stdout))
       })
    })
+
+   app.get('/choice', (req, res) => {
+      choices = JSON.parse(fs.readFileSync("sources/coins.json"))
+      console.log(choices)
+      res.render('select_coin', choices)
+   })
 }
